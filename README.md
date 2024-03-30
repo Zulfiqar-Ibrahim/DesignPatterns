@@ -8,7 +8,7 @@ Concrete Products: Implement the Abstract Product interfaces to provide specific
 Imagine that you are creating a furniture shop simulator. Your code consists of classes that represent:
 1. A family of related products, say: Chair + Sofa + CoffeeTable.
 2. Several variants of this family. For example, products Chair + Sofa + CoffeeTable are available in these variants: Modern, Victorian, ArtDeco.
-<img src="images/example.png">
+<img src="images/problem-en.png">
 You need a way to create individual furniture objects so that they match other objects of the same family. Customers get quite mad when they receive non-matching furniture.
 # what is the solution?
  the Abstract Factory pattern suggests is to explicitly declare interfaces for each distinct product of the product family (e.g., chair, sofa or coffee table). Then you can make all variants of products follow those interfaces. For example, all chair variants can implement the Chair interface; all coffee table variants can implement the CoffeeTable interface, and so on.
