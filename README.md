@@ -13,9 +13,14 @@ You need a way to create individual furniture objects so that they match other o
 # what is the solution?
  the Abstract Factory pattern suggests is to explicitly declare interfaces for each distinct product of the product family (e.g., chair, sofa or coffee table). Then you can make all variants of products follow those interfaces. For example, all chair variants can implement the Chair interface; all coffee table variants can implement the CoffeeTable interface, and so on.
  <img src = "images/solution2.png">
+ 
+ The whole Abstract design pattern is defined in this structural image.
+ <img src = "images/structure.png">
 
  # Code example
  This example illustrates how the Abstract Factory pattern can be used for creating cross-platform UI elements without coupling the client code to concrete UI classes, while keeping all created elements consistent with a selected operating system.
+
+ <img src = "images/example.png">
 
  The same UI elements in a cross-platform application are expected to behave similarly, but look a little bit different under different operating systems. Moreover, it’s your job to make sure that the UI elements match the style of the current operating system. You wouldn’t want your program to render macOS controls when it’s executed in Windows.
 
