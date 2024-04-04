@@ -54,3 +54,28 @@ Builder: This is an interface or abstract class that defines the steps for const
 Concrete Builder: These are classes that implement the builder interface and provide specific implementations for constructing different representations of the complex object.
 
 Product: This is the complex object being constructed. It can be composed of multiple parts or configurations.
+
+# Prototype design pattern
+The Prototype design pattern is a creational design pattern that allows you to create new objects by cloning existing ones, without relying on their specific classes. This pattern is useful when the construction of an object is complex or when the exact class of the object needs to be hidden from the client code.
+
+Here's how the Prototype pattern works:
+
+Prototype Interface: This is an interface or abstract class that declares a method for cloning itself.
+
+Concrete Prototype: These are classes that implement the Prototype interface and provide concrete implementations for cloning themselves.
+
+Client: The client code creates new objects by cloning existing prototypes, without needing to know their specific classes.
+
+# Singleton
+Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance. The Singleton pattern solves two problems at the same time, violating the Single Responsibility Principle.
+Ensure that a class has just a single instance. Why would anyone want to control how many instances a class has? The most common reason for this is to control access to some shared resource—for example, a database or a file.
+
+Here’s how it works: imagine that you created an object, but after a while decided to create a new one. Instead of receiving a fresh object, you’ll get the one you already created.
+
+Note that this behavior is impossible to implement with a regular constructor since a constructor call must always return a new object by design.
+
+All implementations of the Singleton have these two steps in common:
+
+Make the default constructor private, to prevent other objects from using the new operator with the Singleton class.
+Create a static creation method that acts as a constructor. Under the hood, this method calls the private constructor to create an object and saves it in a static field. All following calls to this method return the cached object.
+If your code has access to the Singleton class, then it’s able to call the Singleton’s static method. So whenever that method is called, the same object is always returned.
