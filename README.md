@@ -100,3 +100,13 @@ The Bridge pattern attempts to solve this problem by switching from inheritance 
 <img src = "images/solution-en-bridge-1.png">
 
 Following this approach, we can extract the color-related code into its own class with two subclasses: Red and Blue. The Shape class then gets a reference field pointing to one of the color objects. Now the shape can delegate any color-related work to the linked color object. That reference will act as a bridge between the Shape and Color classes. From now on, adding new colors won’t require changing the shape hierarchy, and vice versa.
+
+# Decrator 
+The Decorator pattern is a structural design pattern that allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class. It is used to extend or modify the functionality of objects at runtime without directly altering their code.
+
+# facade
+
+The Facade pattern is a structural design pattern that provides a simplified interface to a complex system of classes, interfaces, or subsystems. It hides the complexities of the underlying system and provides a single interface for the client to interact with.
+
+
+Let's say you have a complex video conversion system consisting of multiple classes for video formats, codecs, and conversion algorithms. You want to provide a simple interface for clients to convert videos without exposing the complexities of the system.
